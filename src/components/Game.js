@@ -5,6 +5,8 @@ import "../style.css";
 const Game = () => {
   const [board, setBoard] = useState(Array(9).fill(null));
   const [xIsNext, setXIsNext] = useState(true);
+  const [noPlayerWon, setNoPlayerWon] = useState(false);
+
   let winner = calculateWinner(board);
 
   const handleClick = (i) => {
@@ -19,7 +21,12 @@ const Game = () => {
     setBoard(Array(9).fill(null));
     winner = null;
     setXIsNext(true);
+    setNoPlayerWon(false);
   };
+
+  if (!board.includes(null) && !noPlayerWon) {
+    setNoPlayerWon(true);
+  }
 
   return (
     <div className="game">
@@ -34,6 +41,7 @@ const Game = () => {
       <button onClick={resetGame} className="resetBtn">
         Reset Game
       </button>
+      {noPlayerWon && <p>No player won! Please reset the game.</p>}
     </div>
   );
 };
