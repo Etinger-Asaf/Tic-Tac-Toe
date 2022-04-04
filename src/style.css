@@ -1,0 +1,38 @@
+.gameHeader {
+  text-align: center;
+}
+.squareStyle {
+  background-color: rgb(255, 231, 199);
+
+  height: 100px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 10px;
+  border: grey 0.2px solid;
+  font-size: 3em;
+  color: rgb(50, 212, 158);
+  font-weight: bold;
+  margin-top: none;
+}
+
+.boardStyle {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  margin: auto;
+  width: 70%;
+}
+
+.game {
+  text-align: center;
+}
+
+.player {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.resetBtn {
+  border: none;
+  padding: 1em;
+  border-radius: 10px;
+}
