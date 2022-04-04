@@ -3,9 +3,11 @@ import "./style.css";
 
 function App() {
   return (
-    <div>
-      <h1 className="gameHeader">Tic Tac Toe</h1>
-      <Game />
+    <div className="background">
+      <div className="all">
+        <h1 className="gameHeader">Tic Tac Toe</h1>
+        <Game />
+      </div>
     </div>
   );
 }
